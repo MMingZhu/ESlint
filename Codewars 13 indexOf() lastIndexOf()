@@ -1,0 +1,43 @@
+The goal of this exercise is to convert a string to a new string where each character in the new string is '(' if that character appears only once in the original string, or ')' if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+
+Examples:
+
+"din" => "((("
+
+"recede" => "()()()"
+
+"Success" => ")())())"
+
+"(( @" => "))(("
+
+  function duplicateEncode(word){
+
+  var string = "";
+
+  var lowerCaseWord = word.toLowerCase();
+
+  for (var i = 0; i < lowerCaseWord.length; i++) {
+
+    if (lowerCaseWord.indexOf(lowerCaseWord[i]) === lowerCaseWord.lastIndexOf(lowerCaseWord[i])) {
+
+      string += "(";
+
+    } else {
+
+      string += ")";
+
+    }
+    }
+
+      return string;
+
+  }
+
+indexOf 和 lastIndexOf 都是索引文件 　　
+
+indexOf 是查某个指定的字符串在字符串首次出现的位置（索引值） （也就是从前往后查）
+
+lastIndexOf 是从右向左查某个指定的字符串在字符串中最后一次出现的位置（也就是从后往前查）
+
+
+
