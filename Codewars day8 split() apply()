@@ -1,0 +1,24 @@
+Simple, given a string of words, return the length of the shortest word(s).
+
+String will never be empty and you do not need to account for different data types.
+
+function findShort(s){ 
+  var arr = s.split(' ').map(function(t){return t.length});
+  return Math.min.apply(null,arr);
+}
+
+1，string.split(' ')
+
+split() 方法用于把一个字符串分割成字符串数组。
+
+2，Array.map()
+
+map()方法创建一个新数组，它会给原数组中的每个元素都按顺序调用一次callback函数，callback每次执行后的返回值形成一个新数组。
+
+3，Math.min()
+
+给定数值中最小的数。若任一参数不能转换为数值，则返回NaN。
+
+3，apply()
+
+在调用一个存在的函数时，你可以为其制定一个this对象。this指当前对象，也就是调用这个函数的对象。使用apply，可以只写一次这个方法然后在另一个对象中继承它，而不用在新对象中重复写该方法。
