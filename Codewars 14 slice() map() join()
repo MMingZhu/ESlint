@@ -1,0 +1,26 @@
+Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word.
+
+Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+
+Example:
+
+Not Jaden-Cased: "How can mirrors be real if our eyes aren't real" Jaden-Cased: "How Can Mirrors Be Real If Our Eyes Aren't Real" Note that the Java version expects a return value of null for an empty string or null.
+
+
+String.prototype.toJadenCase = function () {
+    return this.split(' ').map(function(word){
+        return word.charAt(0).toUpperCase() + word.slice(1); 
+}).join(' '); };
+
+
+slice() 方法可从已有的数组中返回选定的元素;
+
+:返回值
+
+:返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。
+
+map() 方法按照原始数组元素顺序依次处理元素;
+
+join() 方法用于把数组中的所有元素放入一个字符串;
+
+:返回一个字符串。该字符串是通过把 arrayObject 的每个元素转换为字符串，然后把这些字符串连接起来，在两个元素之间插入 separator 字符串而生成的。
